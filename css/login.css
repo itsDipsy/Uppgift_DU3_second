@@ -39,6 +39,8 @@ p {
 }
 
 .label {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 25px;
 }
 
@@ -69,16 +71,24 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    z-index: 1;
-    position: absolute;
-    top: 10px;
-    left: 20px;
+    height: 100%;
 }
 
 .await_dom_innertext{
     width: 40vw;
     height: 20%;
+=======
+    height: 120vh;
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 5vw;
+}
+
+.await_dom_innertext{
+    width: 40vw;
+    height: 10%;
+>>>>>>> Stashed changes
     background-color: white;
     font-size: 25px;
     color: black;
