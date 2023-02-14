@@ -20,6 +20,7 @@ async function fetch_function(input_data_obj, request_form) {
     console.log(response);
     let resource = await response.json();
     console.log(resource)
+    return resource;
 }
 
 function new_user(username, password) {
