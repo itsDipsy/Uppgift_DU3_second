@@ -76,6 +76,7 @@ footer {
     position: absolute;
     top: 10px;
     left: 5vw;
+    border-radius: 20px;
 }
 
 .await_dom_innertext{
