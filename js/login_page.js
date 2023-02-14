@@ -1,4 +1,4 @@
-function init_login_page_html() {
+function init_login_and_register_page_html() {
     document.body.style.backgroundColor = "turquoise";
     document.querySelector("#the_whole").innerHTML = "";
     let html_component_login_page = document.querySelector("#the_whole").innerHTML = `
