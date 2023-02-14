@@ -36,6 +36,7 @@ function init_login_page_html() {
 }
 
 function login() {
+    
     document.querySelector("body").style.backgroundColor = "turquoise";
     document.querySelector(".page_name").innerHTML = "Login"
 
