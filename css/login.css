@@ -62,7 +62,23 @@ footer {
     margin: 30px;
 }
 
+.await_dom {
+    width: 90vw;
+    background-color: rgba(255, 255, 255, 0.781);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
+.await_dom_innertext{
+    width: 10vw;
+    height: 20%;
+    background-color: white;
+    font-size: 25px;
+    color: black;
+    border-radius: 20px;
+}
 
 
 
