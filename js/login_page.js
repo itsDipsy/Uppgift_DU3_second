@@ -56,12 +56,13 @@ function login() {
                 let fetch_obj = new_user(document.querySelector(".username").value, document.querySelector(".password").value)
                 console.log(fetch_obj);
                 async function start_request(){
-                    let resource = await fetch_function(fetch_obj, "get");
                     let await_dom = document.createElement("div");
+                    await_dom.classList.add("await_dom")
                     await_dom.innerHTML = `
                         <div class="await_dom_innertext">fetching ...</div>
                     `;
-                    document.querySelector("#login_input_wrapper ").appendChild(await_dom);
+                    document.querySelector("#the_whole").appendChild(await_dom);
+                    let resource = await fetch_function(fetch_obj, "get");
                 }
                 start_request();
 
