@@ -36,6 +36,7 @@ async function start_request(request_form){
 
     let fetch_obj = new_user(document.querySelector(".username").value, document.querySelector(".password").value)
     console.log(fetch_obj);
+    console.log(fetch_obj);
 
     let await_dom = document.createElement("div");
     await_dom.classList.add("await_dom")
