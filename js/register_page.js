@@ -16,10 +16,7 @@ function register() {
             document.querySelector(".register_button").addEventListener("click", (event) => {
                 event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
 
-                let fetch_obj = new_user(document.querySelector(".username").value, document.querySelector(".password").value)
-                console.log(fetch_obj);
-
-                fetch_function(fetch_obj, "post");
+                start_request("post");
                 document.querySelector(".username").value = ""
                 document.querySelector(".password").value = ""
     
