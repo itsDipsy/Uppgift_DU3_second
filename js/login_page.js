@@ -63,6 +63,9 @@ function login() {
                     `;
                     document.querySelector("#the_whole").appendChild(await_dom);
                     let resource = await fetch_function(fetch_obj, "get");
+                    if(resource.status === 200){
+                        await_dom.remove();
+                    }
                 }
                 start_request();
 
