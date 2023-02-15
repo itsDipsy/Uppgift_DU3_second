@@ -32,7 +32,7 @@ function new_user(username, password) {
 
 
 
-async function start_request(){
+async function start_request(request_form){
 
     let await_dom = document.createElement("div");
     await_dom.classList.add("await_dom")
@@ -42,7 +42,7 @@ async function start_request(){
     document.querySelector("#the_whole").appendChild(await_dom);
 
 
-    let resource = await fetch_function(fetch_obj, "get");
+    let resource = await fetch_function(fetch_obj, request_form);
     console.log(resource);
 
     if(resource !== null){ // checks and sees if the resource came through
