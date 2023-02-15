@@ -51,7 +51,7 @@ async function start_request(request_form) {
 
     if (resource !== null) { // checks and sees if the resource came through
         await_dom.remove();
-
+        init_quiz_page_html_component();
     }
     else { // checks and sees if the resource did not come through
         await_dom.remove();
