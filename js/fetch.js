@@ -32,11 +32,7 @@ function new_user(username, password) {
 
 
 
-<<<<<<< Updated upstream
-async function start_request(request_form){
-=======
 async function start_request(request_form) {
->>>>>>> Stashed changes
 
     let fetch_obj = new_user(document.querySelector(".username").value, document.querySelector(".password").value)
     console.log(fetch_obj);
@@ -53,18 +49,11 @@ async function start_request(request_form) {
     let resource = await fetch_function(fetch_obj, request_form);
     console.log(resource);
 
-<<<<<<< Updated upstream
-    if(resource !== null){ // checks and sees if the resource came through
-        await_dom.remove();
-    }
-    else{ // checks and sees if the resource did not come through
-=======
     if (resource.data !== null) { // checks and sees if the resource came through
         await_dom.remove();
         init_quiz_page_html_component();
     }
     else { // checks and sees if the resource did not come through
->>>>>>> Stashed changes
         await_dom.remove();
     }
 }
