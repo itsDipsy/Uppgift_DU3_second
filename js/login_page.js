@@ -49,41 +49,13 @@ function login() {
 
     document.querySelector(".register_button").style.display = "none"
 
-    document.querySelector(".username").value = ""
-    document.querySelector(".password").value = ""
-
     function login_function() {
         if (document.querySelector("#new").classList.contains("selected") !== true) {
             document.querySelector(".login_button").addEventListener("click", (event) => {
 
                 event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
 
-                let fetch_obj = new_user(document.querySelector(".username").value, document.querySelector(".password").value)
-                console.log(fetch_obj);
-
-                async function start_request(){
-
-                    let await_dom = document.createElement("div");
-                    await_dom.classList.add("await_dom")
-                    await_dom.innerHTML = `
-                        <div class="await_dom_innertext">fetching ...</div>
-                    `;
-                    document.querySelector("#the_whole").appendChild(await_dom);
-
-
-                    let resource = await fetch_function(fetch_obj, "get");
-                    console.log(resource);
-
-                    if(resource !== null){ // checks and sees if the resource came through
-                        await_dom.remove();
-                    }
-                    else{ // checks and sees if the resource did not come through
-                        await_dom.remove();
-                    }
-
-
-                }
-                start_request();
+                start_request("get"); 
 
                 document.querySelector(".username").value = ""
                 document.querySelector(".password").value = ""
