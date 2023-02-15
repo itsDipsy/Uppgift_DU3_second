@@ -13,19 +13,7 @@ function init_login_and_register_page_html() {
 
     <div class="page_name">Login</div>
 
-    <div id="login_input_wrapper">
-        <div id="first_input">
-            <div class="label">Username:</div>
-            <input type="text" class="username">
-        </div>
-        <div id="second_input">
-            <div class="label" >Password:</div>
-            <input type="text" class="password">
-        </div>
-        <p class="slogan">Let the magic start!</p>
-        <button class="login_button">Login</button>
-        <button class="register_button">Register</button>
-        <div id="new">New to this? Register for free</div>
+    <div id="quiz_page_wrapper">
 
     </div>
 
