@@ -49,7 +49,7 @@ async function start_request(request_form) {
     let resource = await fetch_function(fetch_obj, request_form);
     console.log(resource);
 
-    if (resource !== null) { // checks and sees if the resource came through
+    if (resource.data !== null) { // checks and sees if the resource came through
         await_dom.remove();
         init_quiz_page_html_component();
     }
