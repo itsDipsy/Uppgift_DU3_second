@@ -74,11 +74,11 @@ function login() {
                     let resource = await fetch_function(fetch_obj, "get");
                     console.log(resource);
 
-                    if(resource !== null){
-                        document.querySelector(".await_dom").style.display = "none"
+                    if(resource !== null){ // checks and sees if the resource came through
+                        await_dom.remove();
                     }
-                    else{
-                        document.querySelector(".await_dom").style.display = "none"
+                    else{ // checks and sees if the resource did not come through
+                        await_dom.remove();
                     }
 
 
