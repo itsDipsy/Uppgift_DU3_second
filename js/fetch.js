@@ -18,11 +18,7 @@ async function fetch_function(input_data_obj, request_form) {
     }
     let response = await fetch(request);
     let resource = await response.json();
-<<<<<<< Updated upstream
-    console.log(resource)
-=======
     return resource;
->>>>>>> Stashed changes
 }
 
 function new_user(username, password) {
