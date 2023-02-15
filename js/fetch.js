@@ -32,7 +32,7 @@ function new_user(username, password) {
 
 
 
-async function start_request(request_form){
+async function start_request(request_form) {
 
     let fetch_obj = new_user(document.querySelector(".username").value, document.querySelector(".password").value)
     console.log(fetch_obj);
@@ -49,10 +49,11 @@ async function start_request(request_form){
     let resource = await fetch_function(fetch_obj, request_form);
     console.log(resource);
 
-    if(resource !== null){ // checks and sees if the resource came through
+    if (resource !== null) { // checks and sees if the resource came through
         await_dom.remove();
+
     }
-    else{ // checks and sees if the resource did not come through
+    else { // checks and sees if the resource did not come through
         await_dom.remove();
     }
 }
