@@ -17,9 +17,7 @@ async function fetch_function(input_data_obj, request_form) {
         request = new Request("https://teaching.maumt.se/apis/access/", http_request_object)
     }
     let response = await fetch(request);
-    console.log(response);
     let resource = await response.json();
-    console.log(resource)
     return resource;
 }
 
