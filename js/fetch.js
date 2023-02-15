@@ -29,3 +29,28 @@ function new_user(username, password) {
 
     return new_user;
 }
+
+
+
+async function start_request(){
+
+    let await_dom = document.createElement("div");
+    await_dom.classList.add("await_dom")
+    await_dom.innerHTML = `
+        <div class="await_dom_innertext">fetching ...</div>
+    `;
+    document.querySelector("#the_whole").appendChild(await_dom);
+
+
+    let resource = await fetch_function(fetch_obj, "get");
+    console.log(resource);
+
+    if(resource !== null){ // checks and sees if the resource came through
+        await_dom.remove();
+    }
+    else{ // checks and sees if the resource did not come through
+        await_dom.remove();
+    }
+
+
+}
