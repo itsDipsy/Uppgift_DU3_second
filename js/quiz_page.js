@@ -20,10 +20,10 @@ function init_quiz_page_html_component() {
     <div id="quiz_page_quiz_wrapper">
         <div class="image_box"></div>
         <div class="quiz_box_wrapper">
-            <div class="quiz_box"></div>   
-            <div class="quiz_box"></div>   
-            <div class="quiz_box"></div>   
-            <div class="quiz_box"></div>   
+            <div class="quiz_box" id="box1"></div>   
+            <div class="quiz_box" id="box2"></div>   
+            <div class="quiz_box" id="box3"></div>   
+            <div class="quiz_box" id="box4"></div>   
         </div>
     </div>
 
@@ -31,4 +31,11 @@ function init_quiz_page_html_component() {
         <p>The Dog Breed Quiz is made possible thanks to the free API by <a href="">DOG CEO Zinc</a> </p>
     </footer>   
 `
+
+init_all_resources_and_media();
+}
+
+function init_all_resources_and_media(){
+    let first_box = document.querySelector("#box1");
+    first_box.innerHTML = "hej"
 }
