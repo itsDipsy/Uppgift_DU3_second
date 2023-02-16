@@ -51,15 +51,7 @@ async function start_request(request_form) {
     let resource = await fetch_function(fetch_obj, request_form);
     console.log(resource)
 
-
-    /* 
-        checks and sees if the resource came through 
-        with resource.data !== null and checks that the request form
-        was a get request so that if true we can send the user to the quiz page
-        by initalzing the quiz html with init_quiz_page_html_component();    
-    */
-    if (resource.data !== null && request_form === "get") {
-
+    if (resource !== null) { // checks and sees if the resource came through
         await_dom.remove();
         init_quiz_page_html_component();
     }
