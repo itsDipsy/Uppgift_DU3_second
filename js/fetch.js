@@ -20,7 +20,7 @@ async function fetch_function(input_data_obj, request_form) {
     console.log(request)
     let response = await fetch(request);
     console.log(response)
-    let resource = await response.();
+    let resource = await response.json();
     console.log(resource)
 }
 
