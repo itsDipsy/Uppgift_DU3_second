@@ -1,9 +1,10 @@
 async function fetch_function(input_data_obj, request_form) {
     let http_request_object;
     let request;
-  
+   
+    console.log(input_data_obj)
     if (request_form === "get") {
-        request = new Request(`https://teaching.maumt.se/apis/access/?action=check_credentials&user_name=${input_data_obj.username}&password=${input_data_obj.password}`)
+        request = new Request(`https://teaching.maumt.se/apis/access/?action=check_credentials&user_name=${input_data_obj.user_name}&password=${input_data_obj.password}`)
     }
     if (request_form === "post") {
         http_request_object = {
@@ -11,10 +12,11 @@ async function fetch_function(input_data_obj, request_form) {
             headers: { "Content-type": "application/json; charset=UTF-8" },
             body: JSON.stringify({
                 action: "register",
-                user_name: input_data_obj.username,
+                user_name: input_data_obj.user_name,
                 password: input_data_obj.password,
             }),
         }
+        console.log(http_request_object)
         request = new Request("https://teaching.maumt.se/apis/access/", http_request_object)
     }
     console.log(request)
@@ -24,9 +26,9 @@ async function fetch_function(input_data_obj, request_form) {
     console.log(resource)
 }
 
-function new_user(username, password) {
+function new_user(user_name1, password) {
     let new_user = {
-        username: username,
+        user_name: user_name1,
         password: password,
     }
 
@@ -50,7 +52,7 @@ async function start_request(request_form) {
 
     let resource = await fetch_function(fetch_obj, request_form);
 
-    if (resource !== null) { // checks and sees if the resource came through
+    if (resource.data !== null) { // checks and sees if the resource came through
         await_dom.remove();
         init_quiz_page_html_component();
     }
