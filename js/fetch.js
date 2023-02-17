@@ -1,3 +1,11 @@
+function new_user(user_name1, password) {
+    let new_user = {
+        user_name: user_name1,
+        password: password,
+    }
+
+    return new_user;
+}
 async function fetch_function(input_data_obj, request_form) {
     let http_request_object;
     let request;
@@ -26,17 +34,6 @@ async function fetch_function(input_data_obj, request_form) {
     console.log(resource)
 }
 
-function new_user(user_name1, password) {
-    let new_user = {
-        user_name: user_name1,
-        password: password,
-    }
-
-    return new_user;
-}
-
-
-
 async function start_request(request_form) {
 
     let fetch_obj = new_user(document.querySelector(".username").value, document.querySelector(".password").value)
@@ -60,3 +57,6 @@ async function start_request(request_form) {
         await_dom.remove();
     }
 }
+
+
+
