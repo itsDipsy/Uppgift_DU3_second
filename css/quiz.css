@@ -1,5 +1,4 @@
 .quiz_page_nav {
-    background-color: white;
     width: 90vw;
     border-radius: 20px;
 }
@@ -70,4 +69,30 @@ header{
     border: 1px solid black;
     background-color: white;
     border-radius: 20px;
+<<<<<<< Updated upstream
+=======
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+#log_out_wrapper{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#log_out_wrapper > div{
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+
+>>>>>>> Stashed changes
 }
