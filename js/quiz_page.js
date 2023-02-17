@@ -45,18 +45,33 @@ the_quiz();
 }
 
 function the_quiz(){
+    if(document.querySelector(".winner_div") !== null){
+        document.querySelector(".winner_div").remove();
+    }
+    if(document.querySelector(".loser_div") !== null){
+        document.querySelector(".loser_div").remove();
+    }
+
+    document.querySelector(".log_out_button").addEventListener("click", () => {
+        init_login_and_register_page_html()
+        login();
+    })
+
 
     let the_quiz_dog_arr = [];
     for (let i = 0; i < 4; i++) {
         let random_dog_number = Math.floor(Math.random() * ALL_BREEDS.length);
         let random_dog = ALL_BREEDS[random_dog_number];
         the_quiz_dog_arr.push(random_dog);
+        document.querySelectorAll(".quiz_box").forEach(ele => {
+            ele.innerHTML = "";
+        })
     }
 
-
-    let the_right_dog_in_quiz_number = Math.floor(Math.random() * the_quiz_dog_arr.length + 1);
-    let the_right_dog_in_quiz = ALL_BREEDS[the_right_dog_in_quiz_number];
     console.log(the_quiz_dog_arr)
+
+    let the_right_dog_in_quiz_number = Math.floor(Math.random() * the_quiz_dog_arr.length);
+    let the_right_dog_in_quiz = the_quiz_dog_arr[the_right_dog_in_quiz_number]
     console.log(the_right_dog_in_quiz)
 
     document.querySelector(".image_box").backgroundImage = `url(${the_right_dog_in_quiz.url})`
@@ -64,7 +79,34 @@ function the_quiz(){
     document.querySelectorAll(".quiz_box").forEach((box, index) => {
         box.innerHTML = the_quiz_dog_arr[index].name;
         box.addEventListener("click", () => {
-            console.log("click " + box.innerHTML)
+            console.log(box.innerHTML)
+            console.log(the_right_dog_in_quiz.name)
+            if(box.innerHTML ===  the_right_dog_in_quiz.name){
+                let the_winner_div_dom = document.createElement("div");
+                the_winner_div_dom.classList.add("winner_div");
+                the_winner_div_dom.innerHTML = `
+                    <div>CORRECT!</div>
+                    <div class="one_more">One More<div>
+                `
+                document.body.appendChild(the_winner_div_dom);
+                document.querySelector(".one_more").addEventListener("click", () => {
+                    console.log("one more")
+                    init_quiz_page_html_component()
+                })
+            }
+            else{
+                let the_loser_div_dom = document.createElement("div");
+                the_loser_div_dom.classList.add("loser_div");
+                the_loser_div_dom.innerHTML = `
+                    <div>WRONG!</div>
+                    <div class="one_more">One More<div>
+                `
+                document.body.appendChild(the_loser_div_dom);
+                document.querySelector(".one_more").addEventListener("click", () => {
+                    console.log("one more")
+                    init_quiz_page_html_component()
+                })
+            }
         })
     })
 
