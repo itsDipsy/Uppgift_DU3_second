@@ -93,3 +93,52 @@ header{
     border-radius: 20px;
 
 }
+
+.winner_div{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(109, 228, 139);
+    font-size: 28px;
+    border-radius: 20px;
+    position: absolute;
+    top: 400px;
+    left: 950px;
+}
+
+.winner_div >:nth-child(1) {
+    color: black;
+}
+
+.one_more{
+    margin-top: 50px;    
+    width: 50%;
+    height: 25%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.loser_div{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(209, 127, 127);
+    font-size: 28px;
+    border-radius: 20px;
+    position: absolute;
+    top: 400px;
+    left: 950px;
+}
+
+.winner_div >:nth-child(1) {
+    color: black;
+}
