@@ -44,7 +44,8 @@ function init_quiz_page_html_component() {
 the_quiz();
 }
 
-function the_quiz(){
+function the_quiz(){// a reset
+
     if(document.querySelector(".winner_div") !== null){
         document.querySelector(".winner_div").remove();
     }
@@ -63,9 +64,6 @@ function the_quiz(){
         let random_dog_number = Math.floor(Math.random() * ALL_BREEDS.length);
         let random_dog = ALL_BREEDS[random_dog_number];
         the_quiz_dog_arr.push(random_dog);
-        document.querySelectorAll(".quiz_box").forEach(ele => {
-            ele.innerHTML = "";
-        })
     }
 
     console.log(the_quiz_dog_arr)
@@ -82,6 +80,12 @@ function the_quiz(){
             console.log(box.innerHTML)
             console.log(the_right_dog_in_quiz.name)
             if(box.innerHTML ===  the_right_dog_in_quiz.name){
+                if(document.querySelector(".winner_div") !== null){
+                    document.querySelector(".winner_div").remove();
+                }
+                if(document.querySelector(".loser_div") !== null){
+                    document.querySelector(".loser_div").remove();
+                }
                 let the_winner_div_dom = document.createElement("div");
                 the_winner_div_dom.classList.add("winner_div");
                 the_winner_div_dom.innerHTML = `
@@ -91,10 +95,16 @@ function the_quiz(){
                 document.body.appendChild(the_winner_div_dom);
                 document.querySelector(".one_more").addEventListener("click", () => {
                     console.log("one more")
-                    init_quiz_page_html_component()
+                    the_quiz();
                 })
             }
             else{
+                if(document.querySelector(".winner_div") !== null){
+                    document.querySelector(".winner_div").remove();
+                }
+                if(document.querySelector(".loser_div") !== null){
+                    document.querySelector(".loser_div").remove();
+                }
                 let the_loser_div_dom = document.createElement("div");
                 the_loser_div_dom.classList.add("loser_div");
                 the_loser_div_dom.innerHTML = `
@@ -104,7 +114,7 @@ function the_quiz(){
                 document.body.appendChild(the_loser_div_dom);
                 document.querySelector(".one_more").addEventListener("click", () => {
                     console.log("one more")
-                    init_quiz_page_html_component()
+                    the_quiz();
                 })
             }
         })
