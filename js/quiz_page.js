@@ -1,6 +1,6 @@
-function init_quiz_page_html_component() {
+function init_quiz_page_html_component(name_for_label) {
 
-    document.body.style.backgroundImage = "linear-gradient(180deg, rgba(25,25,25,0), rgba(25,25,140,1))";
+    document.body.style.backgroundImage = "linear-gradient(#e66465, #9198e5)";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
 
@@ -18,7 +18,7 @@ function init_quiz_page_html_component() {
     </header>
         <div id="log_out_wrapper">
             <div>   
-                <div class="namn">Namn</div>
+                <div class="namn">${name_for_label}</div>
                 <div class="log_out_button">log out</div>
             </div>
         
@@ -53,9 +53,14 @@ function the_quiz(){// a reset
         document.querySelector(".loser_div").remove();
     }
 
+    if(document.querySelector(".container_box_div") !== null){
+        document.querySelector(".container_box_div").remove();
+    }
+
     document.querySelector(".log_out_button").addEventListener("click", () => {
         init_login_and_register_page_html()
         login();
+        change_between_register_and_login_page(register,login)
     })
 
 
@@ -87,12 +92,14 @@ function the_quiz(){// a reset
                     document.querySelector(".loser_div").remove();
                 }
                 let the_winner_div_dom = document.createElement("div");
+                document.querySelector("#quiz_page_quiz_wrapper").appendChild(the_winner_div_dom);
+                
                 the_winner_div_dom.classList.add("winner_div");
                 the_winner_div_dom.innerHTML = `
                     <div>CORRECT!</div>
                     <div class="one_more">One More<div>
                 `
-                document.body.appendChild(the_winner_div_dom);
+                
                 document.querySelector(".one_more").addEventListener("click", () => {
                     console.log("one more")
                     the_quiz();
@@ -106,12 +113,14 @@ function the_quiz(){// a reset
                     document.querySelector(".loser_div").remove();
                 }
                 let the_loser_div_dom = document.createElement("div");
+                document.querySelector("#quiz_page_quiz_wrapper").appendChild(the_loser_div_dom);
                 the_loser_div_dom.classList.add("loser_div");
                 the_loser_div_dom.innerHTML = `
                     <div>WRONG!</div>
                     <div class="one_more">One More<div>
                 `
-                document.body.appendChild(the_loser_div_dom);
+                
+                
                 document.querySelector(".one_more").addEventListener("click", () => {
                     console.log("one more")
                     the_quiz();
