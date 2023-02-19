@@ -1,3 +1,7 @@
+*{
+    z-index: 0;
+}
+
 .dog_logo {
     width: 50px;
     height: 50px;
@@ -5,7 +9,7 @@
 #the_whole{
     width: 100vw;
     height: auto;
-    z-index: 0;
+    position: relative;
 }
 header {
     width: 100vw;

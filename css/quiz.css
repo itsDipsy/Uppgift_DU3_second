@@ -47,10 +47,11 @@ header{
 }
 
 .image_box {
-    width: 50%;
-    height: 250px;
+    width: 30%;
+    height: 500px;
     border: 1px solid black;
     border-radius: 20px;
+  
 }
 
 .quiz_box_wrapper {
@@ -61,6 +62,7 @@ header{
     width: 80%;
     height: 300px;
     gap: 20px;
+    
 }
 
 .quiz_box {
@@ -80,6 +82,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #log_out_wrapper > div{
@@ -91,7 +94,8 @@ header{
     align-items: center;
     background-color: white;
     border-radius: 20px;
-
+    font-size: 20px;
+    
 }
 
 .winner_div{
@@ -105,8 +109,8 @@ header{
     font-size: 28px;
     border-radius: 20px;
     position: absolute;
-    top: 400px;
-    left: 950px;
+    position: absolute;
+    bottom: center;
 }
 
 .winner_div >:nth-child(1) {
@@ -134,11 +138,18 @@ header{
     background-color: rgb(209, 127, 127);
     font-size: 28px;
     border-radius: 20px;
+   
     position: absolute;
-    top: 400px;
-    left: 950px;
+    bottom: center;
+    left: center;
+    margin-bottom: 50px;
 }
 
 .winner_div >:nth-child(1) {
     color: black;
+}
+
+
+.namn{
+    font-size: 32px;
 }

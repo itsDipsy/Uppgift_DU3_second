@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    transition-property: background-image;
+    transition-duration: 1s;
 }
 
 .page_name {
@@ -61,8 +63,6 @@ footer {
 #new{
     margin: 30px;
 }
-
-
 
 
 
