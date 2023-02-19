@@ -1,6 +1,15 @@
 function register() {
+<<<<<<< Updated upstream
     
     document.querySelector("body").style.backgroundColor = "green";
+=======
+<<<<<<< Updated upstream
+    
+    document.querySelector("body").style.backgroundColor = "green";
+=======
+    document.body.style.backgroundImage = "linear-gradient(#e66465, #9198e5)";
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     document.querySelector(".page_name").innerHTML = "Request"
 
     document.querySelector("#new").innerHTML = "Already have a account? login in"
