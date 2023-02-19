@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    transition-property: background-image;
+    transition-duration: 1s;
 }
 
 .page_name {
@@ -51,6 +53,9 @@ p {
     
 }
 
+a{
+    color: white;
+}
 
 footer {
     width: 100vw;
@@ -58,11 +63,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 
 #new{
     margin: 30px;
+    color: white;  
 }
 
 .await_dom {
@@ -90,7 +97,6 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 
 
 
