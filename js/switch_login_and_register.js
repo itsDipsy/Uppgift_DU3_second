@@ -7,6 +7,7 @@ function change_between_register_and_login_page(registerFunc, loginFunc) {
             registerFunc();
         }
         else {
+            document.querySelector("body").style.backgroundColor = "green";
             loginFunc();
         }
     })
