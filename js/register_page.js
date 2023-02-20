@@ -1,9 +1,13 @@
 function register() {
+<<<<<<< Updated upstream
     document.querySelector("body").style.backgroundColor = "green";
     document.body.style.backgroundImage = "linear-gradient(#e66465, #9198e5)";
 
     
     document.querySelector("body").style.backgroundColor = "green";
+=======
+    document.body.style.backgroundImage = "linear-gradient(#e66465, #9198e5)";
+>>>>>>> Stashed changes
     document.body.style.backgroundImage = "linear-gradient(#e66465, #9198e5)";
     document.querySelector(".page_name").innerHTML = "Register"
 
