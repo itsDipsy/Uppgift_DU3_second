@@ -2,6 +2,7 @@ body {
     margin: 0;
     transition-property: background-image;
     transition-duration: 1s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .page_name {
@@ -33,7 +34,10 @@ input {
     margin: 40px;
     font-size: 25px;
 }
-
+nav li {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 p {
     margin: 40px 0px 40px 0px;
     font-size: 24px;
@@ -94,7 +98,18 @@ footer {
     border-radius: 20px;
 }
 
-
+.error_dom{
+    width: 30vw;
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: red;
+    border-radius: 10px;
+    padding: 10px;
+}
 
 @media screen and (max-width: 1730px) {
     .login_button {
@@ -164,7 +179,7 @@ footer {
   }
 
 
-  @media screen and (max-height:700px) {
+  @media screen and (max-height:750px) {
     .login_button {
         width: 45vw;
         height: 11vh;
@@ -176,4 +191,26 @@ footer {
         height: 5vh;
         font-size: 25px;
     }
+    .error_dom{
+        height: 20%;
+        margin-bottom: 50px;
+    }    
   }
+
+  @media screen and (max-width: 700px) {
+    .error_dom{
+        width: 50%;
+    }    
+ }
+  @media screen and (max-width: 420px) {
+    .error_dom{
+        width: 70%;
+    }    
+ }
+
+ @media screen and (max-width: 280px) {
+    .error_dom{
+        width: 89%;
+    }    
+ }
+
