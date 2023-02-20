@@ -40,3 +40,20 @@ li {
     color: rgb(70, 17, 105);
     font-size: 25px;
 }
+
+.username{
+    letter-spacing: 1px;   
+    padding-left: 5px;
+}
+.username *{
+    margin-left: 10px;
+}
+
+.password{
+    letter-spacing: 2px;   
+    padding-left: 5px;
+}
+.password *{
+    margin-left: 10px;
+}
+
