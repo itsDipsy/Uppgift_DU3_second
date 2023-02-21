@@ -9,6 +9,7 @@ function new_user(user_name1, password) {
 async function fetch_function(input_data_obj, request_form, dog_data) {
     let http_request_object;
     let request;
+    console.log(input_data_obj)
     if (request_form === "get" && input_data_obj !== "1" && dog_data === undefined) {
         console.log("yes1")
         request = new Request(`https://teaching.maumt.se/apis/access/?action=check_credentials&user_name=${input_data_obj.user_name}&password=${input_data_obj.password}`)
@@ -50,8 +51,8 @@ async function start_request(request_form, dog_data) {
     else{
         fetch_obj = "1";
     }
- 
     let resource = await fetch_function(fetch_obj, request_form, dog_data);
+    console.log(resource);
     if(resource.data === null && resource.status !== "success") { // checks and sees if the resource did not come through
         let error_dom = document.createElement("div")
         error_dom.classList.add("error_dom");
