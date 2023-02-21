@@ -55,18 +55,9 @@ function login() {
 
     document.querySelector(".register_button").style.display = "none";
 
-
     function login_function() {
         if (document.querySelector("#new").classList.contains("selected") !== true) {
             document.querySelector(".login_button").addEventListener("click", (event) => {
-
-                event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
-
-                start_request("get");
-
-                document.querySelector(".username").value = "";
-                document.querySelector(".password").value = "";
-
 
                 event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
 
@@ -92,7 +83,6 @@ function login() {
                 test();
                 document.querySelector(".username").value = "";
                 document.querySelector(".password").value = "";
-                
             })
         }
     }
