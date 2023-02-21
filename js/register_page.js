@@ -1,10 +1,5 @@
 function register() {
-
-    document.querySelector("body").style.backgroundColor = "green";
-    document.body.style.backgroundImage = "linear-gradient(#e66465, #9198e5)";
-
     
-    document.querySelector("body").style.backgroundColor = "green";
     document.querySelector(".page_name").innerHTML = "Request"
 
     document.querySelector("#new").innerHTML = "Already have a account? login in"
@@ -18,20 +13,15 @@ function register() {
     function reister_function() {
         if (document.querySelector("#new").classList.contains("selected") === true) {
             document.querySelector(".register_button").addEventListener("click", (event) => {
+                
                 event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
-
-
-                start_request("post");
-                document.querySelector(".username").value = ""
-                document.querySelector(".password").value = ""
-    
 
                  async function test(){
                     let request_server_dom = document.createElement("div");
                     request_server_dom.classList.add("the_await_request_dom");
                     document.querySelector("#the_whole").appendChild(request_server_dom);
                     request_server_dom.innerHTML = `
-                        <div>fetching image ...</div>
+                        <div>fetching server ...</div>
                     `;
 
 
@@ -43,7 +33,6 @@ function register() {
                 test();
                 document.querySelector(".username").value = "";
                 document.querySelector(".password").value = "";
-
             })
         }
     }
