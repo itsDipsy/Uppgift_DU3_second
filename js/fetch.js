@@ -9,7 +9,6 @@ function new_user(user_name1, password) {
 async function fetch_function(input_data_obj, request_form, dog_data) {
     let http_request_object;
     let request;
-    console.log(input_data_obj)
     if (request_form === "get" && input_data_obj !== "1" && dog_data === undefined) {
         console.log("yes1")
         request = new Request(`https://teaching.maumt.se/apis/access/?action=check_credentials&user_name=${input_data_obj.user_name}&password=${input_data_obj.password}`)
