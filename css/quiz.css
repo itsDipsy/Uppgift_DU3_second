@@ -2,7 +2,9 @@
     width: 90vw;
     border-radius: 20px;
 }
-
+#the_whole{
+    position: relative;
+}
 .log_out_button {
     border: 1px solid black;
     border-radius: 20px;
@@ -43,15 +45,20 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    position: relative;
 }
 
 .image_box {
     width: 30%;
     height: 500px;
-    border: 1px solid black;
     border-radius: 20px;
-  
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .quiz_box_wrapper {
@@ -153,6 +160,7 @@ header{
 .namn{
     font-size: 32px;
 }
+
 
 @media screen and (max-width: 1266px){
     .log_out_button {
