@@ -1,8 +1,6 @@
 
 function init_login_and_register_page_html() {
-
-function init_login_and_register_page_html() {
-
+    
     document.querySelector("#the_whole").innerHTML = "";
     let html_component_login_page = document.querySelector("#the_whole").innerHTML = `
     <header>
@@ -23,8 +21,6 @@ function init_login_and_register_page_html() {
         </div>
         <div id="second_input">
             <div class="label" >Password:</div>
-
-            <input type="text" class="password">
             <input type="password" class="password">
 
         </div>
