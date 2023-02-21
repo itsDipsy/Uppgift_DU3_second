@@ -9,19 +9,11 @@ function register() {
     document.querySelector(".login_button").style.display = "none"
     document.querySelector(".register_button").style.display = "block"
 
-    document.querySelector(".username").value = ""
-    document.querySelector(".password").value = ""
 
     function reister_function() {
         if (document.querySelector("#new").classList.contains("selected") === true) {
             document.querySelector(".register_button").addEventListener("click", (event) => {
                 event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
-
-
-                start_request("post");
-                document.querySelector(".username").value = ""
-                document.querySelector(".password").value = ""
-    
 
                  async function test(){
                     let request_server_dom = document.createElement("div");
