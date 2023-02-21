@@ -52,30 +52,6 @@ function init_login_and_register_page_html() {
 }
 
 function login() {
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-    
-    document.querySelector("body").style.backgroundColor = "turquoise";
-    document.querySelector(".page_name").innerHTML = "Login"
->>>>>>> Stashed changes
-
-    document.querySelector("body").style.backgroundImage = "linear-gradient(#64e6bf, #9198e5)";
-
-    document.querySelector(".page_name").innerHTML = "Login";
-
-    document.querySelector("#new").innerHTML = "New to this? Register for free";
-
-    document.querySelector(".slogan").innerHTML = "Let the magic start";
-
-<<<<<<< Updated upstream
-    document.querySelector(".login_button").style.display = "block";
-
-    document.querySelector(".register_button").style.display = "none";
-=======
-    document.querySelector(".username").value = ""
-    document.querySelector(".password").value = ""
-=======
 
     document.querySelector("body").style.backgroundImage = "linear-gradient(#64e6bf, #9198e5)";
 
@@ -88,26 +64,10 @@ function login() {
     document.querySelector(".login_button").style.display = "block";
 
     document.querySelector(".register_button").style.display = "none";
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 
     function login_function() {
         if (document.querySelector("#new").classList.contains("selected") !== true) {
             document.querySelector(".login_button").addEventListener("click", (event) => {
-<<<<<<< Updated upstream
-
-=======
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-                event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
-
-                start_request("get");
-
-                document.querySelector(".username").value = "";
-                document.querySelector(".password").value = "";
-
-
-=======
 
                 event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
 
@@ -133,8 +93,6 @@ function login() {
                 test();
                 document.querySelector(".username").value = "";
                 document.querySelector(".password").value = "";
-                
->>>>>>> Stashed changes
             })
         }
     }
