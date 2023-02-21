@@ -42,6 +42,7 @@ function init_quiz_page_html_component(name_for_label) {
 `
 
 the_quiz();
+return
 }
 
 function the_quiz(){// a reset
@@ -71,19 +72,32 @@ function the_quiz(){// a reset
         the_quiz_dog_arr.push(random_dog);
     }
 
-    console.log(the_quiz_dog_arr)
-
     let the_right_dog_in_quiz_number = Math.floor(Math.random() * the_quiz_dog_arr.length);
     let the_right_dog_in_quiz = the_quiz_dog_arr[the_right_dog_in_quiz_number]
     console.log(the_right_dog_in_quiz)
 
-    document.querySelector(".image_box").backgroundImage = `url(${the_right_dog_in_quiz.url})`
+    async function get_image() {
+        document.querySelector(".image_box").style.backgroundImage = `url(./media/logo.png)`;
+        let get_image_dom = document.createElement("div");
+        get_image_dom.classList.add("the_await_request_dom");
+        document.querySelector("#the_whole").appendChild(get_image_dom);
+        get_image_dom.innerHTML = `
+            <div>fetching server ...</div>
+        `;
+
+        let resource = await start_request("get", the_right_dog_in_quiz.url) 
+
+        document.querySelector(".the_await_request_dom").remove();
+
+        console.log(resource.message);
+        document.querySelector(".image_box").style.backgroundImage = `url(${resource.message})`
+    }
+    get_image();
+
 
     document.querySelectorAll(".quiz_box").forEach((box, index) => {
         box.innerHTML = the_quiz_dog_arr[index].name;
         box.addEventListener("click", () => {
-            console.log(box.innerHTML)
-            console.log(the_right_dog_in_quiz.name)
             if(box.innerHTML ===  the_right_dog_in_quiz.name){
                 if(document.querySelector(".winner_div") !== null){
                     document.querySelector(".winner_div").remove();
