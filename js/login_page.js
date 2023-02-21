@@ -1,13 +1,6 @@
-<<<<<<< Updated upstream
+
 function init_login_and_register_page_html() {
-=======
-<<<<<<< Updated upstream
-function init_login_page_html() {
-    document.body.style.backgroundColor = "turquoise";
-=======
-function init_login_and_register_page_html() {
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+    
     document.querySelector("#the_whole").innerHTML = "";
     let html_component_login_page = document.querySelector("#the_whole").innerHTML = `
     <header>
@@ -28,15 +21,8 @@ function init_login_and_register_page_html() {
         </div>
         <div id="second_input">
             <div class="label" >Password:</div>
-<<<<<<< Updated upstream
             <input type="password" class="password">
-=======
-<<<<<<< Updated upstream
-            <input type="text" class="password">
-=======
-            <input type="password" class="password">
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
         </div>
         <p class="slogan">Let the magic start!</p>
         <button class="login_button">Login</button>
