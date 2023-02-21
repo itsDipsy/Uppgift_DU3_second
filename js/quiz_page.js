@@ -72,18 +72,10 @@ function the_quiz(){// a reset
         the_quiz_dog_arr.push(random_dog);
     }
 
-<<<<<<< Updated upstream
-    console.log(the_quiz_dog_arr)
-
-=======
->>>>>>> Stashed changes
     let the_right_dog_in_quiz_number = Math.floor(Math.random() * the_quiz_dog_arr.length);
     let the_right_dog_in_quiz = the_quiz_dog_arr[the_right_dog_in_quiz_number]
     console.log(the_right_dog_in_quiz)
 
-<<<<<<< Updated upstream
-    document.querySelector(".image_box").backgroundImage = `url(${the_right_dog_in_quiz.url})`
-=======
     async function get_image() {
         document.querySelector(".image_box").style.backgroundImage = `url(./media/logo.png)`;
         let get_image_dom = document.createElement("div");
@@ -102,16 +94,10 @@ function the_quiz(){// a reset
     }
     get_image();
 
->>>>>>> Stashed changes
 
     document.querySelectorAll(".quiz_box").forEach((box, index) => {
         box.innerHTML = the_quiz_dog_arr[index].name;
         box.addEventListener("click", () => {
-<<<<<<< Updated upstream
-            console.log(box.innerHTML)
-            console.log(the_right_dog_in_quiz.name)
-=======
->>>>>>> Stashed changes
             if(box.innerHTML ===  the_right_dog_in_quiz.name){
                 if(document.querySelector(".winner_div") !== null){
                     document.querySelector(".winner_div").remove();
