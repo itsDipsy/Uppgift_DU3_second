@@ -32,7 +32,7 @@ function init_login_and_register_page_html() {
     </div>
 
     <footer>
-        <p>The Dog Breed Quiz is made possible thanks to the free API by <a href="">DOG CEO Zinc</a> </p>
+        <p>The Dog Breed Quiz is made possible thanks to the free API by <a href="https://dog.ceo/dog-api/">DOG CEO Zinc</a> </p>
     </footer>
 `
 }

@@ -37,7 +37,7 @@ function init_quiz_page_html_component(name_for_label) {
     </div>
 
     <footer>
-        <p>The Dog Breed Quiz is made possible thanks to the free API by <a href="">DOG CEO Zinc</a> </p>
+        <p>The Dog Breed Quiz is made possible thanks to the free API by <a href="https://dog.ceo/dog-api/">DOG CEO Zinc</a> </p>
     </footer>   
 `
 
