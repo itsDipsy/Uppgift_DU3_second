@@ -20,7 +20,7 @@ function register() {
                     request_server_dom.classList.add("the_await_request_dom");
                     document.querySelector("#the_whole").appendChild(request_server_dom);
                     request_server_dom.innerHTML = `
-                        <div>fetching image ...</div>
+                        <div>fetching server ...</div>
                     `;
 
 
