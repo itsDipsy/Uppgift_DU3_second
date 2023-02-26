@@ -167,11 +167,9 @@ header{
     color: black;
 }
 
-
 .namn{
     font-size: 25px;
 }
-
 
 @media screen and (max-width: 1266px){
     .log_out_button {
@@ -189,6 +187,7 @@ header{
         width: 400px;
     }
 }
+
 @media screen and (max-width: 659px){
     .log_out_button {
         width: 40%;

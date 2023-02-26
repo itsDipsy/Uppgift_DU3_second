@@ -14,7 +14,7 @@ function register() {
             document.querySelector(".register_button").addEventListener("click", (event) => {
                 event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
 
-                 async function test(){
+                 async function fetching_server(){
                     let request_server_dom = document.createElement("div");
                     request_server_dom.classList.add("the_await_request_dom");
                     document.querySelector("#the_whole").appendChild(request_server_dom);
@@ -23,12 +23,12 @@ function register() {
                     `;
 
 
-                    let response = await start_request("post");
+                    let response = await start_request_request("post");
                     console.log(response)
                     request_server_dom.remove();
 
                 }
-                test();
+                fetching_server();
                 document.querySelector(".username").value = "";
                 document.querySelector(".password").value = "";
 

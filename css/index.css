@@ -102,15 +102,53 @@ li {
 }
 
 
-.error_dom{
-    width: 30vw;
-    height: 10vh;
-    background-color: white;
+.request_dom_close{
+    width: 95vw;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0.568);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    color: red;
-    border-radius: 10px;
-    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    border-radius: 20px;
+}
+.request_dom_close > div {
+    font-size: 22px;
+    background-color: white;
+    width: 95%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid gray;
+}
+
+.request_dom_close > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.request_dom_close > div > button {
+    font-size: 20px;
+    width: 50%;
+}
+
+
+
+
+.error_dom{
+    width: 80vw;
+    height: 25px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

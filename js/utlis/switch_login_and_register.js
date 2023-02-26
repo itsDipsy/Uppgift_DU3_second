@@ -5,7 +5,7 @@ function change_between_register_and_login_page(registerFunc, loginFunc) {
 
         if (document.querySelector("#new").classList.contains("selected")) {
             if(document.querySelector(".error_dom") !== null){
-                document.querySelector(".error_dom").remove();
+                document.querySelector(".error_dom").style.backgroundColor = "rgba(0, 0, 0, 0)"
             }
             document.querySelector(".username").value = ""
             document.querySelector(".password").value = ""
@@ -13,11 +13,15 @@ function change_between_register_and_login_page(registerFunc, loginFunc) {
         }
         else {
             if(document.querySelector(".error_dom") !== null){
-                document.querySelector(".error_dom").remove();
+                document.querySelector(".error_dom").style.backgroundColor = "rgba(0, 0, 0, 0)"
             }
             document.querySelector(".username").value = ""
             document.querySelector(".password").value = ""
             loginFunc();
         }
     })
+}
+
+function a_teapot_happend(){
+    
 }

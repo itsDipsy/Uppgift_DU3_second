@@ -83,12 +83,12 @@ function the_quiz(){// a reset
             <div>fetching server ...</div>
         `;
 
-        let resource = await start_request("get", the_right_dog_in_quiz.url) 
+        let resource = await start_request_quiz("get", the_right_dog_in_quiz.url) 
 
         document.querySelector(".the_await_request_dom").remove();
 
-        console.log(resource.message);
-        document.querySelector(".image_box").style.backgroundImage = `url(${resource.message})`
+        console.log(resource.the_resource.message);
+        document.querySelector(".image_box").style.backgroundImage = `url(${resource.the_resource.message})`
     }
     get_image();
 

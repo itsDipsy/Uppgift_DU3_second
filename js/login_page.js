@@ -57,7 +57,7 @@ function login() {
 
                 event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
 
-                async function test(){
+                async function server_fetch(){
                     let request_server_dom = document.createElement("div");
                     request_server_dom.classList.add("the_await_request_dom");
                     document.querySelector("#the_whole").appendChild(request_server_dom);
@@ -65,17 +65,17 @@ function login() {
                         <div>fetching server ...</div>
                     `;
 
-                    let response = await start_request("get");
-
+                    let response = await start_request_login("get");
+                    console.log(response);
                     request_server_dom.remove();
 
 
-                    if(response.data.count_correct >= 0){
+                    if(response.the_resource.data.count_correct >= 0){
                         console.log("yes");
-                        init_quiz_page_html_component(response.data.user_name)
+                        init_quiz_page_html_component(response.the_resource.data.user_name)
                     }
                 }
-                test();
+                server_fetch();
                 document.querySelector(".username").value = "";
                 document.querySelector(".password").value = "";
             })
