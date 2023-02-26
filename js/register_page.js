@@ -1,6 +1,5 @@
 function register() {
-
-    document.body.style.backgroundImage = "linear-gradient(#e66465, #9198e5)";
+    document.body.style.backgroundColor = "green"
     
     document.querySelector(".page_name").innerHTML = "Request"
 

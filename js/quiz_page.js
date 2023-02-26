@@ -1,6 +1,6 @@
 function init_quiz_page_html_component(name_for_label) {
 
-    document.body.style.backgroundImage = "linear-gradient(#e66465, #9198e5)";
+    document.body.style.backgroundColor = "turquoise"
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
 

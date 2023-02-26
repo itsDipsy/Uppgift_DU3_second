@@ -39,7 +39,7 @@ function init_login_and_register_page_html() {
 
 function login() {
 
-    document.querySelector("body").style.backgroundImage = "linear-gradient(#64e6bf, #9198e5)";
+    document.body.style.backgroundColor = "turquoise"
 
     document.querySelector(".page_name").innerHTML = "Login";
 
