@@ -63,7 +63,7 @@ li {
 
 
 .the_await_request_dom {
-    width: 90vw;
+    width: 95vw;
     height: 95%;
     background-color: rgba(255, 255, 255, 0.568);
     display: flex;
@@ -75,11 +75,22 @@ li {
     border-radius: 20px;
     
 }
-
+.the_await_request_dom_other{
+    width: 95vw;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0.568);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    position: absolute;
+    z-index: 100;
+    border-radius: 20px;
+}
 .the_await_request_dom > div {
-    font-size: 32px;
+    font-size: 22px;
     background-color: white;
-    width: 40%;
+    width: 80%;
     height: 15%;
     display: flex;
     justify-content: center;
@@ -87,3 +98,16 @@ li {
     border-radius: 20px;
 }
 
+
+.error_dom{
+    width: 30vw;
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: red;
+    border-radius: 10px;
+    padding: 10px;
+}

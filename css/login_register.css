@@ -85,44 +85,6 @@ footer {
     font-size: 15px;
 }
 
-.await_dom {
-    width: 90vw;
-    background-color: rgba(255, 255, 255, 0.877);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 120vh;
-    z-index: 1;
-    position: absolute;
-    top: 10px;
-    left: 5vw;
-    border-radius: 20px;
-}
-
-.await_dom_innertext{
-    width: 40vw;
-    height: 10%;
-    background-color: white;
-    font-size: 25px;
-    color: black;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.error_dom{
-    width: 30vw;
-    height: 10vh;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    color: red;
-    border-radius: 10px;
-    padding: 10px;
-}
 
 @media screen and (max-width: 1730px) {
     .login_button {
@@ -205,13 +167,13 @@ footer {
 
   @media screen and (max-height:750px) {
     .login_button {
-        width: 80vw;
+        width: 50vw;
         height: 50px;
         font-size: 20px;
     }
 
     .register_button {
-        width: 80vw;
+        width: 50vw;
         height: 50px;
         font-size: 20px;
     }

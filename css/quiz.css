@@ -49,6 +49,7 @@ header{
 }
 
 .image_box {
+    margin-top: 50px;
     width: 30%;
     height: 500px;
     border-radius: 20px;
@@ -62,26 +63,26 @@ header{
 }
 
 .quiz_box_wrapper {
-    margin: 40px;
+    margin-top: 10px;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    width: 80%;
-    height: 300px;
-    gap: 20px;
+    width: 85%;
+    height: 100px;
+    gap: 5px;
     
 }
 
 .quiz_box {
     width: 100%;
-    height: 80px;
-    border: 1px solid black;
+    height: 40px;
+    border: 1px solid rgb(107, 106, 106);
     background-color: white;
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 #log_out_wrapper{
@@ -106,18 +107,20 @@ header{
 }
 
 .winner_div{
-    width: 400px;
-    height: 200px;
+    width: 350px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(109, 228, 139);
+    background-color: rgb(127, 209, 145);
     font-size: 28px;
     border-radius: 20px;
-    position: absolute;
+   
     position: absolute;
     bottom: center;
+    left: center;
+    margin-bottom: 50px;
 }
 
 .winner_div >:nth-child(1) {
@@ -125,19 +128,19 @@ header{
 }
 
 .one_more{
-    margin-top: 50px;    
-    width: 50%;
-    height: 25%;
+    margin-top: 20px;    
+    width: 90%;
+    height: 35%;
     display:flex;
     justify-content: center;
     align-items: center;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .loser_div{
-    width: 400px;
-    height: 200px;
+    width: 380px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,7 +161,7 @@ header{
 
 
 .namn{
-    font-size: 32px;
+    font-size: 25px;
 }
 
 
@@ -207,10 +210,10 @@ header{
         align-items: center;
     }
     .winner_div{
-        width: 300px;
+        width: 280px;
     }
     .loser_div{
-        width: 300px;
+        width: 280px;
     }
 }
 

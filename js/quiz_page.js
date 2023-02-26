@@ -24,8 +24,6 @@ function init_quiz_page_html_component(name_for_label) {
         
         </div>
 
-    <div class="page_name">Quiz</div>
-
     <div id="quiz_page_quiz_wrapper">
         <div class="image_box"></div>
         <div class="quiz_box_wrapper">
@@ -96,6 +94,9 @@ function the_quiz(){// a reset
 
 
     document.querySelectorAll(".quiz_box").forEach((box, index) => {
+        if(document.querySelector(".the_await_request_dom_other") !== null){
+            document.querySelector(".the_await_request_dom_other").remove();
+        }
         box.innerHTML = the_quiz_dog_arr[index].name;
         box.addEventListener("click", () => {
             if(box.innerHTML ===  the_right_dog_in_quiz.name){
@@ -106,20 +107,29 @@ function the_quiz(){// a reset
                     document.querySelector(".loser_div").remove();
                 }
                 let the_winner_div_dom = document.createElement("div");
-                document.querySelector("#quiz_page_quiz_wrapper").appendChild(the_winner_div_dom);
+                let the_winner_div_background_dom = document.createElement("div");
                 
+                the_winner_div_background_dom.classList.add("the_await_request_dom_other")
+
                 the_winner_div_dom.classList.add("winner_div");
                 the_winner_div_dom.innerHTML = `
                     <div>CORRECT!</div>
                     <div class="one_more">One More<div>
                 `
+                the_winner_div_background_dom.appendChild(the_winner_div_dom);
+                document.querySelector("#the_whole").appendChild(the_winner_div_background_dom);
                 
                 document.querySelector(".one_more").addEventListener("click", () => {
                     console.log("one more")
                     the_quiz();
                 })
+
+            
             }
             else{
+                if(document.querySelector(".the_await_request_dom_other") !== null){
+                    document.querySelector(".the_await_request_dom_other").remove();
+                }
                 if(document.querySelector(".winner_div") !== null){
                     document.querySelector(".winner_div").remove();
                 }
@@ -127,18 +137,24 @@ function the_quiz(){// a reset
                     document.querySelector(".loser_div").remove();
                 }
                 let the_loser_div_dom = document.createElement("div");
-                document.querySelector("#quiz_page_quiz_wrapper").appendChild(the_loser_div_dom);
+                let the_loser_div_background_dom = document.createElement("div");
+                
+                the_loser_div_background_dom.classList.add("the_await_request_dom_other")
+
                 the_loser_div_dom.classList.add("loser_div");
                 the_loser_div_dom.innerHTML = `
-                    <div>WRONG!</div>
+                    <div>Wrong!</div>
                     <div class="one_more">One More<div>
                 `
+                the_loser_div_background_dom.appendChild(the_loser_div_dom);
                 
-                
+                document.querySelector("#the_whole").appendChild(the_loser_div_background_dom);
                 document.querySelector(".one_more").addEventListener("click", () => {
                     console.log("one more")
                     the_quiz();
                 })
+
+               
             }
         })
     })
