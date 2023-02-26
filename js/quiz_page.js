@@ -80,7 +80,7 @@ function the_quiz(){// a reset
         get_image_dom.classList.add("the_await_request_dom");
         document.querySelector("#the_whole").appendChild(get_image_dom);
         get_image_dom.innerHTML = `
-            <div>fetching server ...</div>
+            <div>getting random image ...</div>
         `;
 
         let resource = await start_request_quiz("get", the_right_dog_in_quiz.url) 
