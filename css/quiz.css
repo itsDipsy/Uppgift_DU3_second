@@ -9,7 +9,7 @@
     border: 1px solid black;
     border-radius: 20px;
     width: 15%;
-    height: 3.5vh;
+    height: 4.5vh;
     background-color: rgb(233, 231, 231);
     display: flex;
     justify-content: center;
@@ -189,7 +189,7 @@ header{
 
 @media screen and (max-width: 426px){
     .log_out_button {
-        width: 50%;
+        width: 40%;
     }
     #log_out_wrapper > div{
         width: 80%;
