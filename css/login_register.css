@@ -2,10 +2,10 @@ body {
     margin: 0;
     transition-property: background-image;
     transition-duration: 1s;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .page_name {
+    font-family: bold;
     margin: 40px 0px 40px 0px;
     width: 100vw;
     height: 10vh;
@@ -36,14 +36,16 @@ input {
     margin: 20px;
     font-size: 15px;
 }
+
 nav li {
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 p {
     margin: 0px 0px 0px 0px;
     font-size: 15px;
- 
+
 }
 
 .label {
@@ -56,17 +58,17 @@ p {
     width: 15vw;
     height: 50px;
     font-size: 25px;
-    
+
 }
 
 .register_button {
     width: 15vw;
     height: 50px;
     font-size: 25px;
-    
+
 }
 
-a{
+a {
     color: white;
 }
 
@@ -79,9 +81,9 @@ footer {
 }
 
 
-#new{
+#new {
     margin: 10px;
-    color: white;  
+    color: white;
     font-size: 15px;
 }
 
@@ -92,6 +94,7 @@ footer {
         height: 50px;
         font-size: 25px;
     }
+
     .register_button {
         width: 25vw;
         height: 50px;
@@ -104,15 +107,16 @@ footer {
         height: 50px;
         font-size: 25px;
     }
-  }
+}
 
 
-  @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .login_button {
         width: 35vw;
         height: 5vh;
         font-size: 25px;
     }
+
     .register_button {
         width: 35vw;
         height: 5vh;
@@ -130,11 +134,11 @@ footer {
         height: 30px;
         font-size: 20px;
     }
-  }
+}
 
 
 
-  
+
 @media screen and (max-height: 1000px) {
     .login_button {
         width: 35vw;
@@ -147,10 +151,10 @@ footer {
         height: 5vh;
         font-size: 25px;
     }
-  }
+}
 
 
-  @media screen and (max-height: 825px) {
+@media screen and (max-height: 825px) {
     .login_button {
         width: 35vw;
         height: 10vh;
@@ -162,10 +166,10 @@ footer {
         height: 5vh;
         font-size: 25px;
     }
-  }
+}
 
 
-  @media screen and (max-height:750px) {
+@media screen and (max-height:750px) {
     .login_button {
         width: 50vw;
         height: 50px;
@@ -183,26 +187,27 @@ footer {
         height: 50px;
         font-size: 25px;
     }
-    .error_dom{
+
+    .error_dom {
         height: 20%;
         margin-bottom: 50px;
-    }    
-  }
+    }
+}
 
-  @media screen and (max-width: 700px) {
-    .error_dom{
+@media screen and (max-width: 700px) {
+    .error_dom {
         width: 50%;
-    }    
- }
-  @media screen and (max-width: 420px) {
-    .error_dom{
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .error_dom {
         width: 70%;
-    }    
- }
+    }
+}
 
- @media screen and (max-width: 280px) {
-    .error_dom{
+@media screen and (max-width: 280px) {
+    .error_dom {
         width: 89%;
-    }    
- }
-
+    }
+}
