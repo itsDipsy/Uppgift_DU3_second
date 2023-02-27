@@ -51,11 +51,25 @@ function login() {
 
     document.querySelector(".register_button").style.display = "none";
 
+   
     function login_function() {
         if (document.querySelector("#new").classList.contains("selected") !== true) {
+
+         
+
             document.querySelector(".login_button").addEventListener("click", (event) => {
 
+           
+
                 event.stopImmediatePropagation(); // Denna behövs för annars kommer både login och fetch click event bubblas
+
+                
+                function local_storage(){
+                    localStorage.setItem("username", document.querySelector(".username").value)
+                    localStorage.setItem("password", document.querySelector(".password").value)
+                    console.log(localStorage.getItem("password"))
+                }
+                local_storage();
 
                 async function server_fetch(){
                     let request_server_dom = document.createElement("div");
