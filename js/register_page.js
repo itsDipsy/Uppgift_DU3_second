@@ -1,7 +1,7 @@
 function register() {
     document.body.style.backgroundColor = "green"
     
-    document.querySelector(".page_name").innerHTML = "Request"
+    document.querySelector(".page_name").innerHTML = "Register"
 
     document.querySelector("#new").innerHTML = "Already have a account? login in"
     document.querySelector(".slogan").innerHTML = "Let the quiz games begin";
