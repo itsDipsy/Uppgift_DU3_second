@@ -1,16 +1,16 @@
 @font-face {
     font-family: normal;
-    src: url("/fonts/RobotoCondensed-Regular.ttf");
+    src: url("../fonts/RobotoCondensed-Regular.ttf");
 }
 
 @font-face {
     font-family: bold;
-    src: url("/fonts/RobotoCondensed-Bold.ttf");
+    src: url("../fonts/RobotoCondensed-Bold.ttf");
 }
 
 @font-face {
     font-family: light;
-    src: url("/fonts/RobotoCondensed-Light.ttf");
+    src: url("../fonts/RobotoCondensed-Light.ttf");
 }
 
 body {
